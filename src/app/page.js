@@ -1,6 +1,10 @@
-import Header from "@/components/Header";
+import HeroForm from "@/components/forms/HeroForm";
+import { getServerSession } from "next-auth";
+import { SessionProvider } from "next-auth/react";
+import { authOptions } from "./api/auth/[...nextauth]/route";
 
-export default function Home() {
+export default async function Home() {
+  const session = await getServerSession(authOptions);
   return (
     <main>
       <section className="pt-32"> 
@@ -13,13 +17,7 @@ export default function Home() {
             Add your links about yourself. your jusivc you videos you rohos etc.
           </h2>
         </div>
-
-        <form className="inline-flex items-center shadow-lg shadow-gray-700/30">
-          <span className="bg-white py-4 pl-4 rounded">seelinks.com/</span>
-          <input type="text" placeholder="username" className="py-4 rounded" />
-          <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-bold rounded py-4 px-6">Join Now</button>
-        </form>
-        
+          <HeroForm user={session?.user} />
       </section>
     </main>
   );
