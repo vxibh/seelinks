@@ -8,7 +8,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 export default async function grabUsername(formData){
     
     const username = formData.get('username');
-    await mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+    mongoose.connect(process.env.MONGODB_URI);
 
     const existingPageDoc = await Page.findOne({ uri: username });
 
