@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  @apply bg-gray-100;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('/bg.jpg'); /* Assuming bg.jpg is in the public folder */
+  background-position:center center;
+  overflow: hidden;
 }

@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Lato, Roboto,  Source_Sans_3, Montserrat  } from "next/font/google";
 import "@/app/globals.css";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../api/auth/[...nextauth]/route";
@@ -6,7 +6,7 @@ import Image from "next/image";
 import { redirect } from "next/navigation";
 import AppSideBar from "@/components/layout/AppSideBar";
 
-const inter = Inter({ subsets: ["latin"] });
+const lato =  Montserrat({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata = {
   title: "Seelinks",
@@ -23,7 +23,7 @@ export default async function AppTemplate({ children }) {
   return (
     <html lang="en">
 
-      <body className={inter.className}>
+      <body className={lato.className}>
         <main className="flex min-h-screen">
           <aside className="bg-white w-48 p-5 shadow-lg">
             <div className="rounded-full overflow-hidden aspect-square w-24 mx-auto m-5">

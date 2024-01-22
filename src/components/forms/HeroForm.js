@@ -38,11 +38,11 @@ export default function HeroForm({user}) {
         
         <form
         onSubmit={handleSubmit} className="inline-flex items-center shadow-lg shadow-gray-700/30">
-          <span className="bg-white py-4 pl-4 rounded">seelinks.com/</span>
-          <input type="text" placeholder="username" className="py-4 rounded" />
+          <span className="bg-white py-4 pl-4 rounded-l">seelinks.com/</span>
+          <input type="text" placeholder="username" className="py-4" />
           <button 
 
-          type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-bold rounded py-4 px-6">Join Now</button>
+          type="submit" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 shadow-lg rounded-r">Join Now</button>
         </form>
     )
 }

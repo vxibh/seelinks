@@ -1,7 +1,7 @@
-import { Inter } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "@/app/globals.css";
 import Header from "@/components/Header";
-const inter = Inter({ subsets: ["latin"] });
+const inter = Montserrat({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata = {
   title: "Seelinks",
