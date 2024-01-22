@@ -9,8 +9,8 @@ export default async function Home() {
       <section className="pt-32"> 
 
         <div className="max-w-md mb-8">
-          <h1 className="text-6xl font-bold">
-            Your one link<br/> for everything
+          <h1 className="text-6xl font-bold tracking-wide  leading-tight">
+            One link<br/> for linking everything
           </h1>
           <h2 className="text-gray-500 text-xl mt-6">
             Add your links about yourself. your jusivc you videos you rohos etc.
