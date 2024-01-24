@@ -13,7 +13,7 @@ export default async function Home() {
             One link<br/> for linking everything
           </h1>
           <h2 className="text-gray-500 text-xl mt-6">
-            Add your links about yourself. your jusivc you videos you rohos etc.
+            Add your links about yourself. your music and your social media.
           </h2>
         </div>
           <HeroForm user={session?.user} />
