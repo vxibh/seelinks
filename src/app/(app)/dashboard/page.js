@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { Page } from "@/models/Page";
 import UsernameForm from "@/components/forms/UsernameForm";
 import mongoose from "mongoose";
+import PageSettingsForm from "@/components/forms/PageSettingsForm";
 
 export default async function Dashboard({searchParams}) {
     
@@ -19,7 +20,7 @@ export default async function Dashboard({searchParams}) {
 
     if(page) {
         return (
-            <div>Your Page is : /{page.uri}</div>
+            <PageSettingsForm page={page} />
         )
     }
     return (
