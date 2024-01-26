@@ -5,6 +5,7 @@ import { authOptions } from "../api/auth/[...nextauth]/route";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import AppSideBar from "@/components/layout/AppSideBar";
+import { Toaster } from "react-hot-toast";
 
 const lato =  Montserrat({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -24,6 +25,7 @@ export default async function AppTemplate({ children }) {
     <html lang="en">
 
       <body className={lato.className}>
+        <Toaster/>
         <main className="flex min-h-screen">
           <aside className="bg-white w-48 p-5 shadow-lg">
             <div className="rounded-full overflow-hidden aspect-square w-24 mx-auto m-5">

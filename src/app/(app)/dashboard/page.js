@@ -20,7 +20,7 @@ export default async function Dashboard({searchParams}) {
 
     if(page) {
         return (
-            <PageSettingsForm page={page} />
+            <PageSettingsForm page={page} user={session.user}/>
         )
     }
     return (
